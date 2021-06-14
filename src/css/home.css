@@ -63,10 +63,6 @@ section.home .container .grid_home .home1 button {
   color: #fff;
 }
 
-section.home .container .grid_home img.family {
-  width: 100%;
-}
-
 @media only screen and (max-width: 1280px) {
   section.home {
     height: 100%;
@@ -83,7 +79,7 @@ section.home .container .grid_home img.family {
     display: none;
   }
   section.home img.family {
-    width: 100% !important;
+    width: 94% !important;
     display: block;
     margin: 0 auto;
   }

@@ -5,9 +5,13 @@
           box-sizing: border-box;
 }
 
+* .wrapper {
+  overflow-x: hidden;
+}
+
 * body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
+  background: red;
 }
 
 * body button.plans {
