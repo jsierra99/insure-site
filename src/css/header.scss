@@ -1,0 +1,165 @@
+@import "../abstracts/__colors";
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    padding: 0 10%;
+    z-index: 999;
+    background: #fff;
+
+    img.hamburger
+    {
+        display: none;
+        cursor: pointer;
+    }
+
+    img.close
+    {
+        display: none;
+        cursor: pointer;
+    }
+
+    .right_header
+    {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        img.mobile
+        {
+            display: none;
+        }
+        
+        nav
+        {
+            ul
+            {
+                li
+                {
+                    display: inline-block;
+                    list-style: none;
+                    padding-left: 2rem;
+                    font-size: .9rem;
+
+                    a
+                    {
+                        text-decoration: none;
+                        color: gray;
+                    }
+                }
+            }
+        }
+
+        button.white_bg
+        {
+            border: 2px solid black;
+            margin-left: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 752px)
+{
+    header
+    {   
+        position: relative;
+        
+        img.hamburger
+        {
+            display: block !important;
+        }
+
+        .right_header
+        {
+            display: none;
+        }
+
+        button.plans
+        {
+            display: none;
+        }
+    }
+
+    header.show
+    {
+        position: relative;
+
+        .right_header
+        {
+            position: absolute;
+            display: block;
+            height: 100vh;
+            background: #2B282F;
+            top: 80px;
+            left: 0;
+            width: 100% !important;
+            padding: 2rem 1rem 0 1rem;
+
+            button
+            {
+                display: block;
+                margin: 0 auto !important;
+                color: #fff;
+                border: 2px solid #fff;
+                width: 100%;
+            }
+
+            img.mobile
+            {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 50vh;
+            }
+
+            nav
+            {
+                ul
+                {
+                    li
+                    {
+                        display: block;
+                        margin-bottom: 2rem;
+                        text-align: center;
+                        padding-left: 0;
+                        
+                        a
+                        {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        
+        img.hamburger
+        {
+            display: none !important;
+        }
+
+        img.close
+        {
+            display: block;
+        }
+    }
+
+    header.no_show
+    {
+        img.hamburger
+        {
+            display: block;
+        }
+
+        img.close
+        {
+            display: none;
+        }
+    }
+}
